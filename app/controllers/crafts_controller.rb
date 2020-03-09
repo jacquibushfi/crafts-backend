@@ -4,7 +4,6 @@ class CraftsController < ApplicationController
   # GET /crafts
   def index
     crafts = Craft.all
-
     render json: crafts
   end
 
@@ -34,9 +33,9 @@ class CraftsController < ApplicationController
   end
 
   # DELETE /crafts/1
-  def destroy
-    craft.destroy
-  end
+  # def destroy
+  #   craft.destroy
+  # end
 
   private
     
