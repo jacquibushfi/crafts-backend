@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :supplies
-  resources :crafts
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  resources :crafts do
+    resources :supplies
+  end
+  
 end
