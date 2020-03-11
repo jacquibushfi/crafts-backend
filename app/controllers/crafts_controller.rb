@@ -4,23 +4,25 @@ class CraftsController < ApplicationController
   # GET /crafts
   def index
     crafts = Craft.all
+    # binding.pry
     render json: crafts
-  end
-
-  # GET /crafts/1
-  def show
-    render json: craft
   end
 
   # POST /crafts
   def create
     craft = Craft.new(craft_params)
-
     if craft.save
       render json: craft
     else
       render json: craft.errors, status: :unprocessable_entity
     end
+  end
+
+  # GET /crafts/1
+  def show
+    craft = Craft.find_by(id: params[:id})
+    # binding.pry
+    render json: craft
   end
 
   # PATCH/PUT /crafts/1
