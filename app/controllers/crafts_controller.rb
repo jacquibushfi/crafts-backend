@@ -1,6 +1,7 @@
 class CraftsController < ApplicationController
   
 
+
   # GET /crafts
   def index
     crafts = Craft.all
@@ -34,11 +35,7 @@ class CraftsController < ApplicationController
     end
   end
 
-  # DELETE /crafts/1
-  # def destroy
-  #   craft.destroy
-  # end
-
+  
   private
     
 

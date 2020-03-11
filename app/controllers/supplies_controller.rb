@@ -35,6 +35,7 @@ class SuppliesController < ApplicationController
 
   # DELETE /supplies/1
   def destroy
+    supply = Supply.find_by(id: params[:id])
     supply.destroy
   end
 
