@@ -21,7 +21,7 @@ class CraftsController < ApplicationController
 
   # GET /crafts/1
   def show
-    craft = Craft.find_by(id: params[:id})
+    craft = Craft.find_by(id: params[:id])
     # binding.pry
     render json: craft
   end
