@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo is for the api portion of my React/Redux project. The data contianed is for Crafts and associated Supplies.
 
-Things you may want to cover:
+* The gem "rack-cors", "active_model_serializer" and "pry" are included in the gemfile.
 
-* Ruby version
+In config/initializers the cors.rb file has had the middleware config section uncommented and the origins set to "*".
 
-* System dependencies
+In config/puma.rb the fetch port was changed to 3001 to allow the api to function on one port and the frontend on another (3000)
 
-* Configuration
+* To create the databases, please run "rails db:migrate" 
 
-* Database creation
+* To see the databases, please run "rails db:seed"
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To start the api, please run "rails s".
